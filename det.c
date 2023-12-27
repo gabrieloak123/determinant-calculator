@@ -69,9 +69,27 @@ void getPermutedArray(int *array, int start, int end, int **permutedArrays, int 
     }
 }
 
-int verifyMinimumChanges(int *initialPattern, int *possiblePermutation){
-    int changes = 0;
-    //verificar quais estão no lugar certo
+void verifyMinimumChanges(int order, int *permutation, int *changes, int start){
+    if(start >= order - 1){
+        return;
+    }
+
+    int minIndex = start;
+    //verificar o menor
+    //trocar ele com o elemento da posição correspondente
+    for(int i = start + 1; i < order; i++){
+
+        if(permutation[i] < permutation[minIndex]){
+            minIndex = i;
+        }
+    }
+    
+    if(minIndex != start){
+        swap(&permutation[minIndex], &permutation[start]);
+        (*changes)++;
+    }
+
+    verifyMinimumChanges(order, permutation, changes, start + 1);
 }
 
 int main() {
@@ -94,5 +112,6 @@ int main() {
 
     free(permutedArrays);
     free(setToPermute);
+    
     return 0;
 }

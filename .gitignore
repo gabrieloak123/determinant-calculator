@@ -1,5 +1,7 @@
 main
 det
+test.c
+test
 # Prerequisites
 *.d
 
