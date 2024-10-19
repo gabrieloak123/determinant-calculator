@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cstdio>
 #include <fstream>
 #include <sstream>
@@ -68,10 +69,20 @@ std::ifstream Parser::open_file(const std::string& file_path) {
     return file;
 }
 
-std::string trim(std::string line) {
+std::string Parser::trim(std::string line) {
     line.erase(0, line.find_first_not_of(' '));
     line.erase(line.find_last_not_of(' ') + 1);
     return line;
+}
+
+bool Parser::are_lengths_the_same(const Matrix& matrix, const std::vector<int>& vec) {
+    for (const auto& matrix_vec : matrix) {
+        if (vec.size() != matrix_vec.size()) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 Matrix Parser::parse_file(const std::string& file_path) {
@@ -83,10 +94,20 @@ Matrix Parser::parse_file(const std::string& file_path) {
         // trim sides
         if (!trim(line).empty()) {
             std::vector<int> line_vector = string_to_vector(line);
-            // TODO: crash if vectors have different lengths
+
+            // Verifying if rows of different sizes were inputed
+            if (!are_lengths_the_same(matrix, line_vector)) {
+                throw std::logic_error("Different size lines inputed");
+            }
+            matrix.push_back(string_to_vector(line));
         }
     }
 
-    return vec;
+    // Verifying if the number of cols match the number of rows
+    if (matrix[0].size() != matrix.size()) {
+        throw std::logic_error("Cant calculate the determinant of a non square matrix");
+    }
+
+    return matrix;
 }
 };  // namespace det
