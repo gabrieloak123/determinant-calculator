@@ -30,11 +30,11 @@ void collectData(int rows, int cols, int **matrix) {
 }
 
 int fact(int n) {
-    if (n == 1) {
+    if (n == 0) {
         return 1;
-    } else {
-        return n * fact(n - 1);
     }
+    return n * fact(n - 1);
+    
 }
 
 void swap(int *a, int *b) {
