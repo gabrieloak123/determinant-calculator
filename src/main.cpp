@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
             Parser parser;
             Calculator calculator;
 
-            calculator.setup(parser.parse_file(argv[0]));
+            calculator.setup(parser.parse_file("../src/test.txt"));
             calculator.calc_determinant();
             calculator.print_result();
 

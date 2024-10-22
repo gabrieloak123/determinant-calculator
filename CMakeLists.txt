@@ -4,13 +4,15 @@ project (determinant-calculator VERSION 1.0.0 LANGUAGES CXX )
 # Enable compile commands
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+set(CMAKE_BUILD_TYPE Debug)
+
 #=== SETTING VARIABLES ===#
 set(APP_NAME "determinant-calculator")
 set(INCLUDE_DIR "include")
 set(COMPILE_OPTIONS ${CMAKE_CXX_FLAGS} "-Wall" "-pedantic" "-g3")
 
 # Set sources
-file(GLOB SOURCES "*.cpp")
+file(GLOB SOURCES "src/*.cpp")
 
 # Remove main from sources
 list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/core/main.cpp")
@@ -32,7 +34,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(DetLib ${SOURCES})
 
 # Create executable
-add_executable(${APP_NAME} main.cpp)
+add_executable(${APP_NAME} src/main.cpp)
 
 # Link executable with library
 target_link_libraries(${APP_NAME} DetLib)
