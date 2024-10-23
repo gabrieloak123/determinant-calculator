@@ -1,3 +1,8 @@
+/**
+ * @file common.h
+ *
+ * @brief Centraliza alguns alias usados nos outros arquivos
+ */
 #ifndef COMMON_H
 # define COMMON_H
 

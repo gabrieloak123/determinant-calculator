@@ -1,4 +1,18 @@
-#include <algorithm>
+/**
+ * @file parser.cpp
+ *
+ * @brief Contém todas as funções da classe Parser
+ *
+ * Tem todas as member functions da classe Parser, sendo elas:
+ * remove_extra_spaces,
+ * safe_stoi,
+ * string_to_vector,
+ * open_file,
+ * trim,
+ * are_lengths_the_same,
+ * parse_file
+ */
+
 #include <cstdio>
 #include <fstream>
 #include <sstream>
@@ -72,7 +86,7 @@ std::vector<int> Parser::string_to_vector(const std::string& line) {
         } else {
             oss << line[i];
 
-            // Forçando os últimos elementos a serem adicionados
+            //
             if (i == line.length() - 1 && !oss.str().empty()) {
                 vec.push_back(std::stoi(oss.str()));
             }

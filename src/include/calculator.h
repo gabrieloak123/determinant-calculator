@@ -1,3 +1,9 @@
+/**
+ * @file calculator.h
+ *
+ * @brief Declara a classe Calculator
+ */
+
 #ifndef CALCULATOR_H
 # define CALCULATOR_H
 

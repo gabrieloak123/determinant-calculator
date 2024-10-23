@@ -1,3 +1,10 @@
+/**
+ * @file main.cpp
+ *
+ * @brief Arquivo que centraliza a execução do programa
+ *
+ * Instancia as classes do projeto e as roda
+ */
 #include <iostream>
 #include <stdexcept>
 #include <string>

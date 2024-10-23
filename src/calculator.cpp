@@ -1,3 +1,18 @@
+/**
+ * @file calculator.cpp
+ *
+ * @brief Contém todas as funções da classe Calculator
+ *
+ * Tem todas as member functions da classe Calculator, sendo elas:
+ * swap,
+ * setup,
+ * print_result,
+ * get_numbers_range,
+ * verify_minimum_changes,
+ * get_permuted_list,
+ * calc_determinant
+ */
+
 #include <cstdlib>
 #include <iostream>
 #include <vector>
@@ -72,9 +87,14 @@ std::vector<int> Calculator::get_numbers_range(int start, int end) {
 }
 
 /**
- * @brief Diz quantas alterações são necessárias para uma lista virar outra
+ * @brief Diz quantas alterações são necessárias para uma lista ordenada virar outra
  *
  * Dada uma lista, verifica recursivamente do mínimo de alterações
+ *
+ * @param order O tamanho da lista
+ * @param permutation A permutação que a função trabalhará encima
+ * @param changes Quantas trocas foram realizadas até o momento
+ * @param start Referência de começo para a recursão atuar encima
  */
 void Calculator::verify_minimum_changes(int order,
                                         std::vector<int>& permutation,

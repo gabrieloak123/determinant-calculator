@@ -1,3 +1,9 @@
+/**
+ * @file parser.h
+ *
+ * @brief Declara a classe Parser
+ */
+
 #ifndef PARSER_H
 #define PARSER_H
 
