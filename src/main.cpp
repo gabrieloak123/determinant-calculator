@@ -1,9 +1,7 @@
-#include <fstream>
 #include <iostream>
-#include <sstream>
 #include <stdexcept>
 #include <string>
-#include <vector>
+#include <strstream>
 #include "include/calculator.h"
 #include "include/common.h"
 #include "include/parser.h"
@@ -12,11 +10,12 @@ using namespace det;
 
 int main(int argc, char* argv[]) {
     try {
-        if (argc == 1) {
-            Parser parser;
+        if (argc == 2) {
             Calculator calculator;
+            std::ostrstream oss;
+            oss << "../files/" << argv[1];
 
-            calculator.setup(parser.parse_file("../src/test.txt"));
+            calculator.setup(Parser::parse_file(oss.str()));
             calculator.calc_determinant();
             calculator.print_result();
 

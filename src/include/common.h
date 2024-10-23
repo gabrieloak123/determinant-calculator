@@ -5,6 +5,7 @@
 
 namespace det {
 
+// Um alias para o tipo matriz
 using Matrix = std::vector<std::vector<int>>;
 
 }  // namespace det

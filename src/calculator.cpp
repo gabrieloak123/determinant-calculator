@@ -106,7 +106,7 @@ void Calculator::verify_minimum_changes(int order,
  *
  * @param current A permutação que está sendo construída
  * @param permuted_lists A lista que armazena as combinações possíveis
- * @param count
+ * @param count Conta quantas permutações foram geradas
  * @param start Índice do começo da lista que está sendo trabalhada no momento
  * @param end Índice do fim da lista que está sendo trabalhada no momento
  */
