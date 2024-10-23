@@ -1,0 +1,71 @@
+\doxysection{det\+::Calculator Class Reference}
+\hypertarget{classdet_1_1Calculator}{}\label{classdet_1_1Calculator}\index{det::Calculator@{det::Calculator}}
+
+
+Faz a matemática da matriz.  
+
+
+
+
+{\ttfamily \#include $<$calculator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdet_1_1Calculator_a7e3640c53e597b2a9f9273491973105c}{setup}} (const Matrix \&matrix)
+\begin{DoxyCompactList}\small\item\em Inicializa os atributos da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdet_1_1Calculator_a3b569420805865d5127149b3053dd690}{calc\+\_\+determinant}} ()
+\begin{DoxyCompactList}\small\item\em Calcula o determinante da matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdet_1_1Calculator_a3f5bfbe84c085ae7d481921b41f9167c}{print\+\_\+result}} ()
+\begin{DoxyCompactList}\small\item\em Mostra na tela o resultado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Faz a matemática da matriz. 
+
+É responsável por fazer as operações que tornam possível calcular o determinante 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdet_1_1Calculator_a3b569420805865d5127149b3053dd690}\index{det::Calculator@{det::Calculator}!calc\_determinant@{calc\_determinant}}
+\index{calc\_determinant@{calc\_determinant}!det::Calculator@{det::Calculator}}
+\doxysubsubsection{\texorpdfstring{calc\_determinant()}{calc\_determinant()}}
+{\footnotesize\ttfamily \label{classdet_1_1Calculator_a3b569420805865d5127149b3053dd690} 
+void det\+::\+Calculator\+::calc\+\_\+determinant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calcula o determinante da matriz. 
+
+Usa o método de soma dos produtos elementares para calcular o determinante \Hypertarget{classdet_1_1Calculator_a3f5bfbe84c085ae7d481921b41f9167c}\index{det::Calculator@{det::Calculator}!print\_result@{print\_result}}
+\index{print\_result@{print\_result}!det::Calculator@{det::Calculator}}
+\doxysubsubsection{\texorpdfstring{print\_result()}{print\_result()}}
+{\footnotesize\ttfamily \label{classdet_1_1Calculator_a3f5bfbe84c085ae7d481921b41f9167c} 
+void det\+::\+Calculator\+::print\+\_\+result (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mostra na tela o resultado. 
+
+Exibe a matriz de entrada e o seu determinante \Hypertarget{classdet_1_1Calculator_a7e3640c53e597b2a9f9273491973105c}\index{det::Calculator@{det::Calculator}!setup@{setup}}
+\index{setup@{setup}!det::Calculator@{det::Calculator}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{classdet_1_1Calculator_a7e3640c53e597b2a9f9273491973105c} 
+void det\+::\+Calculator\+::setup (\begin{DoxyParamCaption}\item[{const Matrix \&}]{matrix}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa os atributos da classe. 
+
+Dada a matriz que será entrada do programa, preenche o campo "{}ordem"{} e o vetor de produtos elementares
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & A matriz em que os cálculos serão realizados \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{calculator_8h}{calculator.\+h}}\item 
+src/\mbox{\hyperlink{calculator_8cpp}{calculator.\+cpp}}\end{DoxyCompactItemize}

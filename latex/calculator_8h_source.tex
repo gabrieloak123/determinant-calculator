@@ -1,0 +1,51 @@
+\doxysection{calculator.\+h}
+\hypertarget{calculator_8h_source}{}\label{calculator_8h_source}\index{src/include/calculator.h@{src/include/calculator.h}}
+\mbox{\hyperlink{calculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ CALCULATOR\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#\ define\ CALCULATOR\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{common_8h}{./common.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }det\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdet_1_1ElementarProductCols}{ElementarProductCols}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Lista\ ordenada\ que\ armazena\ a\ permutação}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<int>\ permutation;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Se\ o\ número\ de\ alterações\ para\ ordenar\ a\ permutação\ é\ par\ ou\ não}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ mods\_even;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdet_1_1Calculator}{Calculator}}\ \{}
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdet_1_1Calculator_a7e3640c53e597b2a9f9273491973105c}{setup}}(\textcolor{keyword}{const}\ Matrix\&\ matrix);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdet_1_1Calculator_a3b569420805865d5127149b3053dd690}{calc\_determinant}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdet_1_1Calculator_a3f5bfbe84c085ae7d481921b41f9167c}{print\_result}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ Matrix\ m\_matrix;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_matrix\_order;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_det;}
+\DoxyCodeLine{00048\ \ \ \ \ std::vector<ElementarProductCols>\ m\_elementar\_products;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<int>\ get\_numbers\_range(\textcolor{keywordtype}{int}\ start,\ \textcolor{keywordtype}{int}\ end);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ swap(\textcolor{keywordtype}{int}\&\ a,\ \textcolor{keywordtype}{int}\&\ b);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ verify\_minimum\_changes(\textcolor{keywordtype}{int}\ order,\ std::vector<int>\&\ permutation,\ \textcolor{keywordtype}{int}\&\ changes,\ \textcolor{keywordtype}{int}\ start);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ get\_permuted\_list(std::vector<int>\ current,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ElementarProductCols>\&\ permuted\_lists,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\&\ count,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ start,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end);}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \}\ \ \textcolor{comment}{//\ namespace\ det}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !CALCULATOR\_H}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ CALCULATOR\_H}}
+
+\end{DoxyCode}

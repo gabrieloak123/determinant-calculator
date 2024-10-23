@@ -14,10 +14,17 @@ namespace det {
 /**
  * @struct ElementarProductCols
  *
- * Armazena uma permutação possível e se é necessário um número par de alterações para chegar nela
+ * @brief Armazena uma permutação possível e se é necessário um número par de alterações para chegar
+ * nela
  */
 struct ElementarProductCols {
+    /*
+     * @brief Lista ordenada que armazena a permutação
+     */
     std::vector<int> permutation;
+    /*
+     * @brief Se o número de alterações para ordenar a permutação é par ou não
+     */
     bool mods_even;
 };
 

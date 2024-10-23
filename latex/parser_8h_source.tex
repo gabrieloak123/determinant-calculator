@@ -1,0 +1,31 @@
+\doxysection{parser.\+h}
+\hypertarget{parser_8h_source}{}\label{parser_8h_source}\index{src/include/parser.h@{src/include/parser.h}}
+\mbox{\hyperlink{parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PARSER\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PARSER\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_8h}{./common.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }det\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdet_1_1Parser}{Parser}}\ \{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ Matrix\ \mbox{\hyperlink{classdet_1_1Parser_a199b159a175f6ac108b7e3365e3cd823}{parse\_file}}(\textcolor{keyword}{const}\ std::string\&\ file\_path);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ are\_lengths\_the\_same(\textcolor{keyword}{const}\ Matrix\&\ matrix,\ \textcolor{keyword}{const}\ std::vector<int>\&\ vec);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ safe\_stoi(\textcolor{keyword}{const}\ std::string\&\ stoi\_candidate);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<int>\ string\_to\_vector(\textcolor{keyword}{const}\ std::string\&\ line);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ std::ifstream\ open\_file(\textcolor{keyword}{const}\ std::string\&\ file\_path);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ remove\_extra\_spaces(\textcolor{keyword}{const}\ std::string\&\ line);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ trim(std::string\ line);}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ \}\ \ \textcolor{comment}{//\ namespace\ det}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !PARSER\_H}}
+
+\end{DoxyCode}

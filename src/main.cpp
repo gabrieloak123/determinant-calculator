@@ -15,6 +15,12 @@
 
 using namespace det;
 
+/*
+ * @brief Função que roda o projeto de maneira centralizada
+ *
+ * @param argc Quantos argumentos são usados para rodar o executável
+ * @param argv Os argumentos usados para executar o programa
+ */
 int main(int argc, char* argv[]) {
     try {
         if (argc == 2) {

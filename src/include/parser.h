@@ -17,7 +17,7 @@ namespace det {
 /**
  * @class Parser
  *
- * Faz a conversão do .txt para dados na memória
+ * @brief Faz a conversão do .txt para dados na memória
  */
 class Parser {
   public:
